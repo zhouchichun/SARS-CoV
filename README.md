@@ -3,7 +3,7 @@
 
 - source url: "https://3g.dxy.cn/newh5/view/pneumonia_timeline?whichFrom=peopleapp"
 
-- 结果展示 
+- 结果展示  参考项目中.png图片
 
 # 环境、语言、模块
   - 需要使用 selenium 模拟打开 浏览器，如 Chrome 浏览器 
