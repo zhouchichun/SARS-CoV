@@ -17,7 +17,7 @@
   
 # 运行
   - python 1get_data.py 。 从目标网址 获取 疫情动态，得到 data_raw_当日日期，如data_raw_2020-01-28。
-  - python 2process_raw_data.py。 得到 data_raw_当日日期_rd，如data_raw_2020-01-28_rd。得到每个城市每日新增的病例情况。```对于报错，需要手动修改data_raw_2020-01-28数据，满足  xxx新增xx例 即可```
-  - python main.py 得到 all_日期.png 和 no_hubei日期.png 两个图像，分别是全国所有城市的平均情况，湖北省单独的情况，全国去除湖北省以外的其他城市平均情况。```main.py 文件中，line 51 日期列表需要手动配置,如[118,119,120,121,122,123]。 line 87 时间跨度，需要手动配置。具体见代码```
+  - python 2process_raw_data.py。 得到 data_raw_当日日期_rd，如data_raw_2020-01-28_rd。得到每个城市每日新增的病例情况。```由于新闻标题格式有少数不统一，因此，对于报错，需要手动修改 data_raw_2020-01-28中对应 对应数据，满足 xxx新增xx例，然后重新运行 python 2process_raw_data.py 即可```
+  - python main.py 得到 all_日期.png 和 no_hubei日期.png 两个图像，分别是全国所有城市的平均情况，湖北省单独的情况，全国去除湖北省以外的其他城市平均情况。```main.py 文件中，line 51 日期列表需要手动配置,如1月18日至1月23日，[118,119,120,121,122,123]。 line 87 时间跨度，需要手动配置，如跨度是6天，则需要修改为  range(6)。具体见代码```
 
                    
