@@ -20,33 +20,12 @@ def get_time(time):
     else:
         return "0-0"
 def get_sit(title):
-    if title.find("湖北省新增新型冠状病毒感染的肺炎病例105例")!=-1:
-        title="湖北新增105例"
-    if title.find("黑龙江省报告新型冠状病毒感染的肺炎新增确诊病例2例")!=-1:
-        title="黑龙江新增2例"
-    if title.find("安徽省报告新型冠状病毒感染的肺炎新增确诊病例6例")!=-1:
-        title="安徽新增6例"
-    if title.find("江苏新增新型肺炎病例 4 例")!=-1:
-        title="江苏新增4例"
-    if title.find("武汉 18 日新增病例 59 例")!=-1:
-        title="武汉新增59例"
-    if title.find("武汉 17 日新增 17 例新型冠状病毒感染的肺炎病例")!=-1:
-        title="武汉新增17例"
-    if title.find("武汉 16 日新增 4 例新型冠状病毒感染的肺炎病例")!=-1:
-        title="武汉新增4例" 
-    #if title.find("日无新增新型冠状病毒感染的肺炎病例")!=-1:
-    #    title="武汉新增0例" 
-
-    
-    title=title.replace("公布","新增")
     title=title.replace("确诊病例","")
     title=title.replace("确诊","")
     content_lst=title.split("新增")
     city,num=content_lst[:2]
     city=city.replace("省","")
     city=city.replace("市","")
-    if title.find("无新增")!=-1:
-        num="0例"
     
     num=num.split("例")[0]
     num=num.replace("一",'1')

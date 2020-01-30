@@ -48,7 +48,7 @@ for city,seq in t_city2seq.items():
     av_all=[]
     av_wuhan=[]
     av_no_wuhan=[]
-    date_range=[i for i in range(118,130)]  # 需要手动配置
+    date_range=[i for i in range(117,131)]  # 需要手动配置
     for i in date_range:
         #tmp=[i,0]
         av_all.append([i,0])
@@ -84,14 +84,14 @@ rate_wuhan=[x[1]for x in av_wuhan]
 rate_no_wuhan=[x[1]for x in av_no_wuhan]
 
 #plt.plot(acc)
-x=[i for i in range(12)]  #需要手动配置
+x=[i for i in range(14)]  #需要手动配置
 all=plt.scatter(x,rate_all,c="b",marker='*')
 wuhan=plt.scatter(x,rate_wuhan,c="y",marker='o')
 no_wuhan=plt.scatter(x,rate_no_wuhan,c="r",marker=',')
 plt.ylabel('days',fontsize=14)
 plt.legend(handles = [all,wuhan,no_wuhan], labels = ['all',"Hubei only",'without Hubei'], loc = 'best')
 plt.legend
-plt.title("The ave infection rate per 10,000 people every day 1-18 1-29")
+plt.title("The ave infection rate per 10,000 people. 1-17 1-30")
 plt.ylabel('Infected population per 10000 people',fontsize=14)
 
 plt.savefig("all_%s.png"%now)
@@ -104,7 +104,7 @@ no_wuhan=plt.scatter(x,rate_no_wuhan,c="r",marker=',')
 plt.ylabel('days',fontsize=14)
 plt.legend(handles = [all,no_wuhan], labels = ['all','without Hubei'], loc = 'best')
 plt.legend
-plt.title("The ave infection rate per 10,000 people every day 1-18 1-29")
+plt.title("The ave infection rate per 10,000 people. 1-17 1-30")
 plt.ylabel('Infected population per 10000 people',fontsize=14)
 
 plt.savefig("no_hubei%s.png"%now)
